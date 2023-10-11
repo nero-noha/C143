@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Object Detection Web App</title>
+</head>
+<body style="background-image: url('gradient-dark-blue-futuristic-digital-background.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+    <h1 class="display-4 text-light text-center">Object Detection Web App</h1>
+    <p class="lead text-light text-center">Please enter the object name you want to search for.</p>
+
+    <div class="text-center">
+        <input type="text" id="objectName" class="form-control" placeholder="Enter object name">
+        <button class="btn btn-primary mt-3" onclick="start()">Start</button>
+    </div>
+
+    <div id="modelStatus" class="text-center text-light mt-3"></div>
+<div id="detectionStatus" class="text-center text-light mt-3"></div>
+
+<button class="btn btn-primary" onclick="restart()">Restart</button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#instructionsModal">
+    Instructions
+</button>
+
+<div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+  
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="instructionsModalLabel">Instructions</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add your game instructions here -->
+                <p>These are the instructions for how to play the game.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="canvas-container">
+</div>
+
+
+<div class="footer text-light text-center">
+    Created by Nero
+</div>
+
+
+</body>
+
+</html>
